@@ -96,6 +96,9 @@ return packer.startup(function(use)
 		end,
 	})
 
+	-- Code runner
+	use({ "CRAG666/code_runner.nvim", requires = "nvim-lua/plenary.nvim" })
+
 	-- tabline configuration
 	use({ "romgrk/barbar.nvim", wants = "nvim-web-devicons" })
 
