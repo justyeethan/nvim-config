@@ -1,14 +1,23 @@
-local setup, bufferline = pcall(require, "bufferline")
-if not setup then
+local status, bufferline = pcall(require, "bufferline")
+if not status then
 	print("tabline error")
 	return
 end
 
 bufferline.setup({
 	animation = true,
-	icon_separator_active = "▎",
-	icon_separator_inactive = "▎",
-	icon_close_tab = "",
-	icon_close_tab_modified = "●",
-	icon_pinned = "車",
+	icons = {
+		separator = {
+			left = "▎",
+		},
+		inactive = {
+			button = "",
+		},
+		modified = {
+			button = "●",
+		},
+		pinned = {
+			button = "車",
+		},
+	},
 })

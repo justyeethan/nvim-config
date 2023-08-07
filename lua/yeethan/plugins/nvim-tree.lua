@@ -13,15 +13,17 @@ vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
 
 -- configure nvim-tree
 nvimtree.setup({
-	view = {
-		adaptive_size = true,
-		mappings = {
-			list = {
-				{ key = "u", action = "dir_up" }, -- go up a directory
-				{ key = "t", action = "tabnew" }, -- New tab keybinding
-			},
-		},
-	},
+  	on_attach = on_attach,
+	-- Depricated:
+	-- view = {
+	-- 	adaptive_size = true,
+	-- 	mappings = {
+	-- 		list = {
+	-- 			{ key = "u", action = "dir_up" }, -- go up a directory
+	-- 			{ key = "t", action = "tabnew" }, -- New tab keybinding
+	-- 		},
+	-- 	},
+	-- },
 	-- change folder arrow icons
 	renderer = {
 		icons = {
